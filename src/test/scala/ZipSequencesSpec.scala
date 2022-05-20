@@ -1,7 +1,8 @@
-import org.scalacheck.Prop.forAll
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
+import org.scalatest.prop.TableDrivenPropertyChecks.whenever
 import org.scalatestplus.scalacheck.Checkers
+import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks.forAll
 
 class ZipSequencesSpec extends AnyFlatSpec with should.Matchers with Checkers {
 
@@ -11,13 +12,11 @@ class ZipSequencesSpec extends AnyFlatSpec with should.Matchers with Checkers {
     check((a: List[Int], b: List[Int]) => zipper(a, b).size == (a ::: b).size)
   }
 
-  it should "return empty list" in {
-    check((a: List[Int], b: List[Int]) => zipper(a, b).empty == List())
-  }
-
-  it should "end with sequence b" in {
+  it should "return first two elements in list as 1st element of List[a] and first element of List[b]" in {
     forAll { (a: List[Int], b: List[Int]) =>
-      zipper(a, b).endsWith(a)
+      whenever(a != List.empty && b != List.empty) {
+        zipper(a, b).take(2) shouldBe List(a.head, b.head)
+      }
     }
   }
 }
