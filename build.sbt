@@ -6,5 +6,7 @@ lazy val root = (project in file("."))
   .settings(
     name := "my-zip"
   )
-libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.11"
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.11" % "test"
+libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.12"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.12" % Test
+libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.16.0" % Test
+libraryDependencies += "org.scalatestplus" %% "scalacheck-1-16" % "3.2.12.0" % Test
