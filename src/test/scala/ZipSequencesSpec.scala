@@ -1,10 +1,7 @@
 import org.scalacheck.Prop.forAll
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
-import org.scalatest.prop.TableDrivenPropertyChecks.whenever
 import org.scalatestplus.scalacheck.Checkers
-
-import scala.List
 
 class ZipSequencesSpec extends AnyFlatSpec with should.Matchers with Checkers {
 
@@ -16,5 +13,11 @@ class ZipSequencesSpec extends AnyFlatSpec with should.Matchers with Checkers {
 
   it should "return empty list" in {
     check((a: List[Int], b: List[Int]) => zipper(a, b).empty == List())
+  }
+
+  it should "end with sequence b" in {
+    forAll { (a: List[Int], b: List[Int]) =>
+      zipper(a, b).endsWith(a)
+    }
   }
 }
