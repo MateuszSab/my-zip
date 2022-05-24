@@ -1,0 +1,18 @@
+@startmindmap
+
+caption myzip method
+title myZip
+
+* <&globe>myzip()
+
+** Seq(1, 2, 3)
+
+** Seq('a', 'a', 'a')
+
+*** Seq(1, 'a', 2, 'a', 3, 'a')
+
+
+
+
+
+@endmindmap
