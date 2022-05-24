@@ -7,7 +7,17 @@ App zips two sequences even if they are of different length. Remaining elements 
 ## Dependencies
 
 It is a Scala program created in Intellij Idea project.
-GitHub workflow created via https://diamantidis.github.io/2020/05/17/ci-with-github-actions-for-scala-project
+
+GitHub workflow created via https://diamantidis.github.io/2020/05/17/ci-with-github-actions-for-scala-project. 
+
+Tests created with : 
+`libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.12"`
+
+`libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.12" % "test"`
+
+`libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.16.0" % "test"`
+
+`libraryDependencies += "org.scalatestplus" %% "scalacheck-1-16" % "3.2.12.0" % "test"`
 
 ## How to run
 
