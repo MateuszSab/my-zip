@@ -1,5 +1,19 @@
 # my-zip
 
-App zipps two sequences even if they are of different lenght. Remaining elements are added to the end of a new sequence.
+## What it does?
 
-Github workflow created via https://diamantidis.github.io/2020/05/17/ci-with-github-actions-for-scala-project 
+App zips two sequences even if they are of different length. Remaining elements are added to the end of a new sequence.
+
+## Dependencies
+
+It is a Scala program created in Intellij Idea project.
+GitHub workflow created via https://diamantidis.github.io/2020/05/17/ci-with-github-actions-for-scala-project
+
+## How to run
+
+1. Import myZip object. OR Add extends App to the myZip project `object myZip extends App {...}`
+2. Use myzip method on two sequences of any type. For example `myzip(Seq(1, 2, 3), Seq('a', 'a', 'a'))`
+
+## Troubleshooting
+
+Using myzip method with a first sequence which contains `CHARS` converts them to `INT`.
