@@ -20,3 +20,21 @@ scalaVersion := "2.13.8"
 ## Troubleshooting
 
 Using myzip method with a first sequence which contains `CHARS` converts them to `INT`.
+
+
+
+```plantuml:md-sample-sequence
+@startmindmap
+
+caption myzip method
+title myZip
+
+
+* myzip()
+
+** Seq(1, 'a', 2, 'a', 3, 'a')
+-- Seq(1, 2, 3)
+-- Seq('a', 'a', 'a')
+
+@endmindmap
+```
