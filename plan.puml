@@ -1,3 +1,4 @@
+```plantuml:md-sample-sequence
 @startmindmap
 
 caption myzip method
@@ -11,3 +12,4 @@ title myZip
 -- Seq('a', 'a', 'a')
 
 @endmindmap
+```
